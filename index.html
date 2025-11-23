@@ -3,13 +3,18 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>الموقع من قبل اثنين من المطورين</title>
+    <title>الموقع قيد التطوير</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <main class="center-wrap">
-      <h1 class="title">ايتم العمل علي الموقع ترقبوا كل جديد ولا تنسوا زيارتنا رابط بالأسفل</h1>
+      <h1 class="title">amir-calculator</h1>
+
+      <div class="controls">
+        <button id="suggest-btn" class="primary">اقترح موضوع للموقع</button>
+        <button id="view-suggestions" class="secondary">اقتراحات</button>
+      </div>
 
       <section class="profiles">
         <div class="card">
@@ -29,7 +34,30 @@
 
       
     </main>
+
+    <!-- Suggestion Modal -->
+    <div id="suggestion-modal" class="modal" aria-hidden="true">
+      <div class="modal-content">
+        <button class="modal-close" id="modal-close">×</button>
+        <h2>اقتراح موضوع</h2>
+        <textarea id="suggestion-text" placeholder="اكتب اقتراحك هنا..." rows="6"></textarea>
+        <div class="modal-actions">
+          <button id="save-draft" class="primary">اقتراح</button>
+          <button id="publish-btn" class="primary" style="display:none;">نشر الاقتراح</button>
+        </div>
+        <div id="draft-preview" class="draft-preview" style="display:none;"></div>
+      </div>
+    </div>
+
+    <!-- View Suggestions Modal -->
+    <div id="list-modal" class="modal" aria-hidden="true">
+      <div class="modal-content">
+        <button class="modal-close" id="list-close">×</button>
+        <h2>جميع الاقتراحات</h2>
+        <div id="suggestions-list" class="suggestions-list"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
-
-
